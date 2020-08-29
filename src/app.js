@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 
 const app = express()
+const port = process.env.PORT || 8000
 
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
@@ -101,7 +102,12 @@ app.get('*', (req, res) => {
   })
 })
 
+/// Running on our computer
+//app.listen(8000, () => {
+//  console.log('Server is up on port 8000.')
+//})
 
-app.listen(8000, () => {
-  console.log('Server is up on port 8000.')
+/// Running on Heroku
+app.listen(port, () => {
+  console.log('Server is up on port ' + port)
 })
