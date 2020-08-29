@@ -1,0 +1,38 @@
+body {
+  color: lightslategrey;
+  font-family: Arial;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+footer {
+  color: darkolivegreen;
+  border-top: 1px solid lightskyblue;
+  margin-top: 16px;
+  padding: 16px 0;;
+}
+
+header h1 {
+  margin-top: 10px 0 50px 0;
+  font-size: 35px;
+}
+
+header div a {
+  color: darkslategrey;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.portrait {
+  height: 300px;
+  width: 240px;
+}
