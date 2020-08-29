@@ -10,11 +10,14 @@ const forecast = (latitude, longtitude, callback) => {
       callback('Unable to find location!', undefined)
     }else {
       callback(undefined, {
+        local_time: body.location.localtime,
         temperature: body.current.temperature,
-        feels_like:  body.current.feelslike
+        feels_like:  body.current.feelslike,
+        humidity: body.current.humidity
       })
     }
   })
 }
 
 module.exports = forecast
+ 
